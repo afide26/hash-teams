@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from './Sidebar';
 import { Link, Route } from 'react-router-dom';
 import { getPlayers } from '../api';
-import parse from 'query-string';
+import { parse } from 'query-string';
 import slug from 'slug';
 
 export default class Players extends Component{
@@ -13,7 +13,6 @@ export default class Players extends Component{
 
   componentDidMount() {
     const {location} = this.props;
-
     location.search 
       ? this.fetchPlayers(parse(location.search).teamId)
       : this.fetchPlayers()

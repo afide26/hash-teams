@@ -56,6 +56,10 @@ a {
 
 .text-center {
   text-align: center;
+  margin: 0 auto;
+}
+h1{
+  font-size: 3rem;
 }
 h1.text-center,
 p.text-center{
@@ -88,6 +92,13 @@ p.text-center{
 
 .two-column {
   display: flex;
+  flex-direction: row;
+}
+
+.two-column>div:first-child{
+  background-color:#cecece;
+  padding: 0 2rem 1rem 2rem;
+  margin-right: 2rem;
 }
 
 .panel {
@@ -191,7 +202,7 @@ p.text-center{
 
 .championships {
   display: flex;
-  margin: 0;
+  margin: 2rem auto;
   padding: 0;
 }
 

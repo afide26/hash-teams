@@ -6,8 +6,10 @@ import {
 } from 'react-router-dom';
 import Home from './Home';
 import Teams from './Teams';
+import TeamPage from './TeamPage';
 import Players from './Players';
 import Navbar from './Navbar';
+import Articles from './Articles';
 import NotFound from './NotFound';
 
 class App extends Component {
@@ -20,6 +22,8 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route path="/teams" component={Teams}/>
             <Route path="/players" component={Players}/>
+            <Route path="/:teamId" exact component={TeamPage}/>
+            <Route path="/:teamId/articles" component={Articles}/>
             <Route component={NotFound}/>
           </Switch>
         </div>
