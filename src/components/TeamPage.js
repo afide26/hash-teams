@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Team from './Team';
+import Loading from './Loading'
 import TeamLogo from './TeamLogo';
 import slug from 'slug';
 
@@ -40,7 +41,7 @@ export default class TeamPage extends Component {
       <div>
         <Team id = {teamId}>
           {(team)=> team === null 
-            ? <h1>Loading</h1>
+            ? <Loading/>
             : <div className="panel">
               <TeamLogo id={teamId}/>
               <h1 className="medium-header">{team.name}</h1>
