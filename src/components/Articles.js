@@ -39,7 +39,7 @@ export default class Articles extends Component {
         />
         <Route path={`${url}/:articleId`} render={({match}) => (
           <Article articleId={match.params.articleId} teamId={teamId} >
-            { (article)=> !article ? <Loading/> : (
+            { (article)=> !article ? <Loading text={`Loading article`}/> : (
               <div className="panel">
                 <article className="article" key={article.id}>
                   <h1 className="header">{article.title}</h1>
